@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+        <!-- ======= Breadcrumbs ======= -->
+        <div class="breadcrumbs" data-aos="fade-in">
+            <div class="container">
+            <h2>Events</h2>
+            <p> Upcoming Webinars and Local SIM Mentoring Events. Mentoring practitioners interested in participating should attend a Mentoring Information Session. </p>
+            </div>
+        </div><!-- End Breadcrumbs -->
+    
+        <!-- ======= Events Section ======= -->
+        <section id="events" class="events">
+            <div class="container" data-aos="fade-up">
+    
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-img">
+                    <img src="{% static 'img/events-1.jpg' %}" alt="...">
+                    </div>
+                    <div class="card-body">
+                    <h5 class="card-title"><a href="">Mentor Webinar</a></h5>
+                    <p class="fst-italic text-center">Tuesday, March 29th at 12:00 PM PST</p>
+                    <p class="card-text">For current Mentors in the Spring 2022 Program. Bring your questions, lessons learned or just listen to what other mentors are experiencing!</p>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-img">
+                    <img src="{% static 'img/events-2.jpg' %}" alt="...">
+                    </div>
+                    <div class="card-body">
+                    <h5 class="card-title"><a href=""> Mentoring Information Session </a></h5>
+                    <p class="fst-italic text-center">Friday, April 1st at 12:00 PM PST</p>
+                    <p class="card-text"> Learn more about how to become a Mentor with the SIM Portland Chapter! </p>
+                    </div>
+                </div>
+    
+                </div>
+            </div>
+    
+            </div>
+        </section><!-- End Events Section -->
+    
+    
+
+{% endblock %}

@@ -1,0 +1,14 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def index(request):
+    return render(request, 'pages/index.html')
+
+def about(request):
+    return render(request, 'pages/about.html')
+
+def events(request):
+    return render(request, 'pages/events.html')
+
+def contact(request):
+    return render(request, 'pages/contact.html')
