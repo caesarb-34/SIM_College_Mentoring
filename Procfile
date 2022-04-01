@@ -1,0 +1,1 @@
+web: gunicorn ment.wsgi --log-file -

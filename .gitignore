@@ -3,3 +3,6 @@ __pycache__/
 venv/
 *.sqlite3
 Mentor-pro/
+
+# Ignore logs from simple_deploy.
+simple_deploy_logs/

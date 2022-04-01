@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'simple_deploy',
     'pages.apps.PagesConfig',
     'mentors.apps.MentorsConfig',
     'django.contrib.admin',
@@ -137,3 +138,13 @@ try:
     from .local_settings import *
 except ImportError:
     pass
+import os
+if 'ON_HEROKU' in os.environ:
+    ALLOWED_HOSTS.append('rhubarb-pudding-90306.herokuapp.com')
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATIC_URL = '/static/'
+    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+    DEBUG = os.getenv('DEBUG') == 'TRUE'
+    SECRET_KEY = os.getenv('SECRET_KEY')

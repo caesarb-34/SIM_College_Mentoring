@@ -4,3 +4,8 @@ Pillow==9.0.1
 psycopg2==2.9.3
 psycopg2-binary==2.9.3
 sqlparse==0.4.2
+
+django-simple-deploy          # Added by simple_deploy command.
+gunicorn                      # Added by simple_deploy command.
+dj-database-url               # Added by simple_deploy command.
+whitenoise                    # Added by simple_deploy command.
